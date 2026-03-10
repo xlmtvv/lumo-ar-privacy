@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMO AR — Privacy Policy & Terms of Use</title>
+    <style>
+        :root {
+            --coral: #FF7F50;
+            --coral-light: #FFF0EB;
+            --bg: #FDFDF5;
+            --text: #1A1A1A;
+            --text-secondary: #555;
+            --border: #E0DDD4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--coral);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        nav a {
+            margin-left: 24px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--coral);
+        }
+
+        nav a.active {
+            color: var(--coral);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 28px;
+            font-size: 15px;
+        }
+
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table th {
+            background: var(--coral-light);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-local {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .badge-third {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+
+        .badge-none {
+            background: #E3F2FD;
+            color: #1565C0;
+        }
+
+        .callout {
+            background: var(--coral-light);
+            border-left: 4px solid var(--coral);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
+
+        .callout p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 19px; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            nav a { margin-left: 16px; }
+            nav a:first-child { margin-left: 0; }
+            .data-table { font-size: 13px; }
+            .data-table th, .data-table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo" onclick="showSection('privacy'); return false;">LUMO <span>AR</span></a>
+            <nav>
+                <a href="#privacy" class="active" onclick="showSection('privacy')">Privacy Policy</a>
+                <a href="#terms" onclick="showSection('terms')">Terms of Use</a>
+                <a href="#support" onclick="showSection('support')">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== PRIVACY POLICY ========== -->
+        <div id="privacy" class="section active">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: March 10, 2026</p>
+
+            <p>
+                LUMO AR ("we", "our", or "the app") is an augmented reality flashcard application
+                developed by Alisher Mutaliyev as an individual developer. Your privacy matters, and
+                this policy explains what information we collect, why, and how we handle it.
+            </p>
+
+            <h2>1. Information We Collect</h2>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Purpose</th>
+                        <th>Storage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Email address</strong></td>
+                        <td>Account creation &amp; authentication</td>
+                        <td><span class="badge badge-third">Firebase Auth</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Display name</strong></td>
+                        <td>Personalization (via Google Sign-In)</td>
+                        <td><span class="badge badge-third">Firebase Auth</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flashcard content</strong></td>
+                        <td>Creating and studying flashcards</td>
+                        <td><span class="badge badge-local">On-device only</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Location (when in use)</strong></td>
+                        <td>Saving AR flashcard positions in the real world</td>
+                        <td><span class="badge badge-local">On-device only</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Camera feed</strong></td>
+                        <td>Rendering augmented reality experience</td>
+                        <td><span class="badge badge-none">Not stored</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>AR world map data</strong></td>
+                        <td>Restoring AR card positions between sessions</td>
+                        <td><span class="badge badge-local">On-device only</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout">
+                <p>
+                    <strong>We do not collect analytics, use advertising SDKs, or track you across
+                    apps or websites.</strong> The app does not use Apple's Ad Tracking (IDFA) and
+                    sets <code>NSPrivacyTracking</code> to <code>false</code>.
+                </p>
+            </div>
+
+            <h2>2. How We Use Your Information</h2>
+            <ul>
+                <li><strong>Authentication:</strong> Your email and name are used solely to create and manage your account via Firebase Authentication.</li>
+                <li><strong>AI-Generated Answers:</strong> When you use the "AI Generate" feature, the text of your flashcard question is sent to our secure server to generate an answer. Only the question text is transmitted — no personal data, device identifiers, or location data is included in this request.</li>
+                <li><strong>Location:</strong> Your GPS coordinates are used exclusively on-device to anchor flashcards in augmented reality. Location data is stored locally in Core Data on your device and is never transmitted to any server.</li>
+                <li><strong>Camera:</strong> The camera feed is processed in real-time by ARKit for augmented reality rendering. No images or video are recorded, stored, or transmitted.</li>
+            </ul>
+
+            <h2>3. Third-Party Services</h2>
+            <p>The app uses the following third-party services:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>What It Does</th>
+                        <th>Their Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Firebase Authentication</strong></td>
+                        <td>Google LLC</td>
+                        <td>User sign-up, login, and session management</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Sign-In</strong></td>
+                        <td>Google LLC</td>
+                        <td>OAuth-based authentication</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Answer Generation</strong></td>
+                        <td>OpenAI (via Azure Functions proxy)</td>
+                        <td>Generates flashcard answers from question text</td>
+                        <td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com/policies/privacy-policy</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                These services receive only the minimum data necessary for their function.
+                We do not share your personal data with any other third parties for marketing,
+                advertising, or data mining purposes.
+            </p>
+
+            <h2>4. Data Storage &amp; Security</h2>
+            <ul>
+                <li><strong>On-device data</strong> (flashcards, decks, AR world maps, location coordinates) is stored locally using Core Data and is protected by iOS data protection.</li>
+                <li><strong>Authentication data</strong> (email, display name) is stored by Firebase Authentication in accordance with Google's security practices.</li>
+                <li>All network communication uses HTTPS/TLS encryption.</li>
+                <li>We do not maintain our own external database of user content.</li>
+            </ul>
+
+            <h2>5. Data Retention &amp; Deletion</h2>
+            <ul>
+                <li><strong>On-device data:</strong> Deleted immediately when you delete the app or remove content within the app.</li>
+                <li><strong>Firebase Auth account:</strong> You can delete your account at any time through the Profile section in the app. This removes your authentication record from Firebase.</li>
+                <li><strong>AI requests:</strong> Flashcard text sent for AI generation is processed in real time and is not stored by our server. OpenAI's data retention policies apply to their processing; refer to their privacy policy linked above.</li>
+            </ul>
+
+            <p>
+                To request complete deletion of all data associated with your account, contact us
+                at the email address listed in the Support section below.
+            </p>
+
+            <h2>6. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Access</strong> the personal data we hold about you.</li>
+                <li><strong>Delete</strong> your account and associated data at any time.</li>
+                <li><strong>Revoke</strong> camera or location permissions via iOS Settings at any time, without affecting the core flashcard functionality.</li>
+                <li><strong>Opt out</strong> of Google Sign-In and use email/password authentication instead.</li>
+            </ul>
+            <p>
+                If you are located in the European Economic Area (EEA), you may also exercise rights
+                under the General Data Protection Regulation (GDPR), including the right to data
+                portability and the right to lodge a complaint with a supervisory authority.
+            </p>
+
+            <h2>7. Children's Privacy</h2>
+            <p>
+                LUMO AR is not directed at children under 13 (or the applicable age in your
+                jurisdiction). We do not knowingly collect personal information from children. If you
+                believe a child has provided us with personal data, please contact us and we will
+                promptly delete it.
+            </p>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time. Changes will be posted on this
+                page with an updated "Last updated" date. Your continued use of the app after changes
+                constitutes acceptance of the revised policy.
+            </p>
+
+            <h2>9. Contact Us</h2>
+            <div class="contact-card">
+                <p><strong>Developer:</strong> Alisher Mutaliyev</p>
+                <p><strong>Email:</strong> <a href="mailto:alimutaliyev.dev@gmail.com">alimutaliyev.dev@gmail.com</a></p>
+                <p><strong>Location:</strong> Kazakhstan</p>
+            </div>
+        </div>
+
+        <!-- ========== TERMS OF USE ========== -->
+        <div id="terms" class="section">
+            <h1>Terms of Use</h1>
+            <p class="last-updated">Last updated: March 10, 2026</p>
+
+            <p>
+                By downloading or using LUMO AR, you agree to these terms. If you do not agree,
+                please do not use the app.
+            </p>
+
+            <h2>1. Description of the App</h2>
+            <p>
+                LUMO AR is an augmented reality flashcard application that allows you to create
+                study decks, generate AI-powered answers, and place flashcards in your physical
+                environment using AR technology.
+            </p>
+
+            <h2>2. User Accounts</h2>
+            <ul>
+                <li>You must create an account (via email/password or Google Sign-In) to use the app.</li>
+                <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+                <li>You must provide accurate information during registration.</li>
+            </ul>
+
+            <h2>3. Acceptable Use</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the app for any unlawful purpose.</li>
+                <li>Attempt to interfere with the app's functionality or security.</li>
+                <li>Submit content that is offensive, harmful, or violates third-party rights.</li>
+                <li>Reverse-engineer, decompile, or disassemble the app.</li>
+            </ul>
+
+            <h2>4. AI-Generated Content</h2>
+            <p>
+                The app includes an AI feature that generates flashcard answers. AI-generated content
+                is provided "as is" and may not always be accurate. You should verify important
+                information independently. We are not liable for decisions made based on AI-generated
+                content.
+            </p>
+
+            <h2>5. Intellectual Property</h2>
+            <p>
+                The app, including its design, code, and branding, is the intellectual property of
+                Alisher Mutaliyev. You retain ownership of the content (flashcards, decks) you create
+                within the app.
+            </p>
+
+            <h2>6. AR Safety</h2>
+            <div class="callout">
+                <p>
+                    When using augmented reality features, always be aware of your surroundings.
+                    Do not use the AR camera while walking, driving, or in situations that require
+                    your full attention. We are not responsible for any injury or damage resulting
+                    from inattentive use of AR features.
+                </p>
+            </div>
+
+            <h2>7. Limitation of Liability</h2>
+            <p>
+                The app is provided "as is" without warranties of any kind, express or implied. To
+                the maximum extent permitted by law, we shall not be liable for any indirect,
+                incidental, or consequential damages arising from your use of the app.
+            </p>
+
+            <h2>8. Termination</h2>
+            <p>
+                We reserve the right to suspend or terminate your access to the app if you violate
+                these terms. You may stop using the app and delete your account at any time.
+            </p>
+
+            <h2>9. Apple's Standard EULA</h2>
+            <p>
+                This app is also subject to Apple's
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Licensed Application End User License Agreement</a>.
+                In the event of a conflict between these terms and Apple's EULA, Apple's EULA shall
+                prevail.
+            </p>
+
+            <h2>10. Governing Law</h2>
+            <p>
+                These terms are governed by and construed in accordance with the laws of the
+                Republic of Kazakhstan, without regard to its conflict of law provisions.
+            </p>
+
+            <h2>11. Changes to Terms</h2>
+            <p>
+                We may modify these terms at any time. Continued use of the app after changes
+                constitutes acceptance.
+            </p>
+
+            <h2>12. Contact</h2>
+            <div class="contact-card">
+                <p><strong>Developer:</strong> Alisher Mutaliyev</p>
+                <p><strong>Email:</strong> <a href="mailto:alimutaliyev.dev@gmail.com">alimutaliyev.dev@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- ========== SUPPORT ========== -->
+        <div id="support" class="section">
+            <h1>Support</h1>
+            <p class="last-updated">We're here to help</p>
+
+            <h2>Get in Touch</h2>
+            <p>
+                If you're experiencing issues with LUMO AR, have questions, or want to provide
+                feedback, don't hesitate to reach out.
+            </p>
+
+            <div class="contact-card">
+                <p><strong>Email:</strong> <a href="mailto:alimutaliyev.dev@gmail.com">alimutaliyev.dev@gmail.com</a></p>
+                <p>We aim to respond within 48 hours.</p>
+            </div>
+
+            <h2>Common Questions</h2>
+
+            <h2 style="font-size: 17px; margin-top: 24px;">How do I delete my account?</h2>
+            <p>
+                Open the app → go to the Profile tab → tap "Delete Account". This will remove your
+                authentication data from Firebase. On-device data (flashcards, decks) is deleted when
+                you uninstall the app.
+            </p>
+
+            <h2 style="font-size: 17px; margin-top: 24px;">The AR feature isn't working</h2>
+            <p>
+                Make sure you've granted camera and location permissions in Settings → LUMO AR.
+                AR requires a device with an A12 chip or later running iOS 17.0+. Ensure you are
+                in a well-lit environment.
+            </p>
+
+            <h2 style="font-size: 17px; margin-top: 24px;">Can I use the app without location access?</h2>
+            <p>
+                Yes. Location is only used for saving AR card positions. You can use all other
+                features — creating decks, studying flashcards, AI generation, and quizzes — without
+                granting location access.
+            </p>
+
+            <h2 style="font-size: 17px; margin-top: 24px;">Is my data sent to any server?</h2>
+            <p>
+                Only two things leave your device: (1) your email/name for authentication via Firebase,
+                and (2) flashcard question text when you use the AI generate feature. Everything
+                else — your flashcards, decks, AR data, and location — stays on your device.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Alisher Mutaliyev. All rights reserved. LUMO AR.
+    </footer>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(function(s) {
+                s.classList.remove('active');
+            });
+            document.querySelectorAll('nav a').forEach(function(a) {
+                a.classList.remove('active');
+            });
+            var section = document.getElementById(id);
+            if (section) {
+                section.classList.add('active');
+            }
+            var link = document.querySelector('nav a[href="#' + id + '"]');
+            if (link) {
+                link.classList.add('active');
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Handle direct URL hash navigation
+        window.addEventListener('hashchange', function() {
+            var hash = window.location.hash.replace('#', '');
+            if (hash) {
+                showSection(hash);
+            }
+        });
+
+        // On page load, check hash
+        (function() {
+            var hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById(hash)) {
+                showSection(hash);
+            }
+        })();
+    </script>
+</body>
+</html>
